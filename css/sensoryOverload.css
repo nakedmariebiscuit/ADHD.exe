@@ -1,0 +1,275 @@
+.landing-container{
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top-ad{
+    cursor: pointer;
+}
+
+.secondTop-ad{
+    cursor: pointer;
+}
+
+.leftSide-links {
+    position: absolute;
+    top: 200px;
+    left: 16px;
+  }
+
+  .links-container{
+    position: absolute;
+    top: 250px;
+    left: 50px;
+  }
+
+.rightSide-ad{
+  position: absolute;
+  top: 1px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.secondrightSide-ad{
+    position: absolute;
+    top: 620px;
+    right: 20px;
+}
+
+.questiongif{
+    padding: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+.bottom-ad{
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.links-list{
+    font-size: 15px;
+}
+
+.mainText-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto; /* Center the mainText-container */
+}
+
+.main-text{
+    font-family: 'Cherry Bomb One';
+    font-size: 25px;
+    text-align: center;
+    background: linear-gradient(to bottom, #65199f, #01e1ff); /* Define your gradient colors here */
+    -webkit-background-clip: text; /* Apply the gradient to text in WebKit browsers */
+    background-clip: text; /* Apply the gradient to text */
+    color: transparent; /* Make the text color transparent to show the gradient */
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Space between items */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .menu-item{
+    position: relative;
+    width: 200px; /*Set the width of the image to 100px*/
+    height: 150px;
+  }
+  
+  .menu-item img {
+    width: 100%; /*make the image 100% of the container width*/
+    height: auto;
+  }
+  
+  .menu-item .page-button {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #bf313100;
+    color: rgb(255, 251, 0);
+    font-size: 20px;  
+    border: none;
+    cursor: pointer;   
+    text-align: center;
+    font-family: 'Butcherman';
+  }
+
+  .sticky-ad{
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    bottom: 0; /* Adjust this value as needed */
+    left: 0;
+    width: 370px; /* Adjust the width as needed */
+    background-color: #f8f9fa00; /* Background color for visibility */
+    padding: 0px; /* Padding for the element */
+    border-right: 1px solid #ddd; /* Optional: border for visibility */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for visibility */
+    z-index: 1000; /* Ensure it stays on top of other content */
+  }
+
+/*#black {
+    height: 600px;
+    width: 2000px;
+    background-color: #90d61f;
+    border-color: #000;
+  }
+  
+  #dvd {
+    position: fixed;
+    left: 0;
+    top: 0px;
+    height: 50px;
+    width: 100px;
+    mask: url("https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg");
+    -webkit-mask: url("https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg");
+    background-repeat: no-repeat;
+    background-size: 75px;
+    background-position: center;
+  }
+
+  .dvd-container{
+    /*
+    position: relative;
+    height: 500px;
+    width: 500px;
+    top: 0;
+    left: 250px;
+    overflow: hidden;
+    transform: translateX(-50%);
+    */
+
+  */
+
+  /*errorflow simulator*/
+
+  #error-container {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#error-message {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #000;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#error-message p {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+#start-errors {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*ghost window*/
+.container {
+    position: fixed; /* originally relative | or absolute, depending on your layout needs*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #00000000;
+    background-color: #65199f00;
+    /*overflow: hidden;*/
+    z-index: 9999;
+    display: none;  
+  }
+  
+  #ghost-image {
+    position: absolute;
+    cursor: grabbing;
+    height: 200px;
+    width: auto;
+  }
+  
+  .ghost {
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  /*flash window*/
+  /* Ensure the flash-container is initially hidden */
+.flash-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: 1000; /* Ensure it appears above other elements */
+  background: transparent; /* Make background transparent */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.flash-image {
+  position: absolute;
+    width: auto; /* Adjust size as needed */
+    height: 350px; /* Maintain aspect ratio */
+}
+
+.menu-item {
+  position: relative;
+}
+
+.page-button {
+  cursor: pointer;
+  /* Add any other styles for your button here */
+}
+
+/*dvd window*/
+.dvd-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 750px;
+  z-index: 1000; /* Ensure it appears above other elements */
+  border: 2px solid #00000000;
+  overflow: hidden;
+  display: none; /* Hidden initially */
+  background: transparent; /* Make background transparent */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+#logo {
+  position: absolute;
+  will-change: transform, color;
+  width: 100px; /* Ensure correct width */
+  height: 100px; /* Ensure correct height */
+
+  mask: url("https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg");
+  -webkit-mask: url("https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg");
+  background-repeat: no-repeat;
+  mask-repeat: no-repeat;
+    
+}

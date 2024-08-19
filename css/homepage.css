@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Add a gray background color with some padding - we're getting rid of this
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+  }*/
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0);
+    
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaaaaa60;
+    width: 100%;
+    padding: 1px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+     background: linear-gradient(141deg, #fefe69 0%, #A9F36A 51%, #57E86B 75%);
+     padding: 20px;
+     margin-top: 20px;
+     color: #094d13;
+     font-family: 'Jua';
+     font-size: 15px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    background: #ff98e9;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  /*footer columns*/
+  /* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    color: #380d2f;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.column{
+    text-align: center;
+    background-color: #ff98e9;
+}
+
+.homepage-background{
+    position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 400vh;
+            background-image: url(https://web.archive.org/web/20090831194240im_/http://geocities.com/ihmc2mt19/image/background/spuare.gif);
+            background-repeat: repeat;
+            z-index: -1;
+}
+
+.homepage-container{
+    position: relative;
+            z-index: 1;
+}

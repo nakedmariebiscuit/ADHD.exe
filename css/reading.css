@@ -1,0 +1,245 @@
+/*text formatting*/
+.text-container{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Define your gradient colors here */
+    -webkit-background-clip: text; /* Apply the gradient to text in WebKit browsers */
+    background-clip: text; /* Apply the gradient to text */
+    color: transparent; /* Make the text color transparent to show the gradient */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.heading{
+    font-size: 50px;
+    text-align: center;
+}
+
+.subheading{
+    font-size: 20px;
+    text-align: center;
+}
+
+.compbanner{
+    position: absolute;
+    top: 200px;
+    left: 16px;
+    float: left;
+    height: 150px;
+    width: 150px;
+}
+
+.compbanner-flip{
+    position: absolute;
+    top: 200px;
+    right: 16px;
+    float: right;
+    height: 150px;
+    width: 150px;
+    transform: scaleX(-1);
+}
+
+.body-text{
+    text-align: center;   
+}
+
+/*marquee*/
+.marquee {
+
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    /* Full width of its parent */
+    white-space: nowrap;
+}
+
+.marquee p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Start off the right edge */
+    transform: translateX(100%);
+    /* Animate to the left */
+    animation: scroll-left 20s linear infinite;
+    color: aqua;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.blur-text {
+    font-size: 24px;
+    transition: filter 3s ease, opacity 3s ease; /* Smooth transition for the blur and opacity effects */
+}
+
+
+  .footer-text{
+    color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+  .email-icon{
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .page-decorator{
+    position: absolute;
+    top: 50%;
+    left: 50px;
+  }
+
+  .page-decorator-two{
+    position: absolute;
+    top: 50%;
+    right: 50px;
+  }
+
+
+  .adhd-synth{
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    height: 200px;
+    width: 250px;
+  }
+
+  .gradient-text {
+    font-size: 1.2em;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 90%);
+    background-clip: text;
+    color: transparent;
+}
+
+.gradient-text-reverse {
+    font-size: 1.2em;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+
+.unique-text-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.unique-fade-blur-text {
+    color: #ff7e5f;
+    text-align: center;
+    font-size: 1.3em;
+    animation: uniqueFadeBlurInOut 10s infinite; /* Adjust the duration as needed */
+}
+
+@keyframes uniqueFadeBlurInOut {
+    0%, 100% {
+        opacity: 1; 
+        filter: blur(0px); /* No blur at the start and end */
+    }
+    50% {
+        opacity: 0; 
+        filter: blur(5px); /* Maximum blur at the midpoint */
+    }
+}
+
+.wizard-container {
+    display: flex;
+    align-items: center; /* Vertically align items in the container */
+}
+
+.wizard-image {
+    width: 200px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.wizard-text {
+    color: #31d1e6;
+    font-size: 1.2em;
+    position: relative; /* Allows for slight adjustments with top, right, bottom, left */
+    top: 5px; /* Adjust position slightly if needed */
+}
+
+/*test*/
+/* Popup container - can be anything you want */
+.popup-mail {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff; /* White text color for visibility */
+}
+
+/* The actual popup */
+.popup-mail .popuptext-mail {
+    visibility: hidden;
+    width: 160px;
+    background-color: #111215; /* Darker background for popup */
+    color: #fff; /* White text color for visibility */
+    text-align: center;
+    border-radius: 1px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+}
+
+/* Popup arrow */
+.popup-mail .popuptext-mail::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* Match arrow color to popup background */
+}
+
+/* Toggle this class - hide and show the popup */
+.popup-mail .show-mail {
+    visibility: visible;
+    -webkit-animation: fadeIn-mail 1s;
+    animation: fadeIn-mail 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn-mail {
+    from { opacity: 0; } 
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn-mail {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/*end*/

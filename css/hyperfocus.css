@@ -1,0 +1,85 @@
+#typewriter {
+        font-family: "VT323", monospace;
+        font-size: 20px;
+        font-weight: 400;
+        font-style: normal;
+        color: #39ff14;
+        height: 500px;
+        width: 100%;
+        /*border: 1px solid #4CAF50;*/
+        background-color: black;
+        padding: 30px;
+}
+
+/*alerts*/
+/* Modal container */
+.modal {
+    display: none; /* Hidden by default*/
+    position: fixed; /* Stay in place*/
+    z-index: 1; /*Sit on top*/
+    left: 0;
+    top: 0;
+    width: 100%; /*Full width*/
+    height: 100%; /*Full height*/
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0); /* Black w/ opacity */
+    /*padding-top: 60px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe00;
+    margin: 5% auto;
+    padding: 0px;
+    border: 1px solid #88888800;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: 3px 3px 8px rgba(149, 149, 149, 0.935);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+/* Close button */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* OK button */
+.ok-button {
+    display: block;
+    margin: 20px auto 0;
+    /*padding: 10px 20px;*/
+    /*background-color: #4CAF50;
+    color: white;
+    border: none;*/
+    border-radius: 5px;
+    cursor: pointer;
+    /*font-size: 16px;*/
+}
+
+.ok-button:hover {
+    background-color: #45a049;
+}
+
+#alertMessage {
+    font-size: 11px;
+}

@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ADHD.exe - An ADHD simulator</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://lordmicrowave.github.io/sim/favicon.ico">
+
+    <!-- Windows XP Theme (include only one theme at a time) -->
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+   <!-- <link rel="stylesheet" href="file:///Users/sasha-leemorare/Documents/adhd.exe/css/toolbar.css"> -->
+
+   <!--Tab Stylesheets-->
+   <link rel="stylesheet" href="file:///Users/sasha-leemorare/Documents/adhd.exe/css/test.css">
+   <link rel="stylesheet" href="file:///Users/sasha-leemorare/Documents/adhd.exe/css/zoneout.css">
+   <link rel="stylesheet" href="file:///Users/sasha-leemorare/Documents/adhd.exe/css/cursor.css" />
+   <link rel="stylesheet" href="/Users/sasha-leemorare/Documents/adhd.exe/css/hyperfocus.css" />
+   <link rel="stylesheet" href="/Users/sasha-leemorare/Documents/adhd.exe/css/todolist.css" />
+   <link rel="stylesheet" href="/Users/sasha-leemorare/Documents/adhd.exe/css/daydreaming.css" />
+   <link rel="stylesheet" href="/Users/sasha-leemorare/Documents/adhd.exe/css/ghostCursor.css" />
+   <link rel="stylesheet" href="/Users/sasha-leemorare/Documents/adhd.exe/css/sensoryOverload.css" />
+   <link rel="stylesheet" href="/Users/sasha-leemorare/Documents/adhd.exe/css/reading.css" />
+   <link rel="stylesheet" href="/Users/sasha-leemorare/Documents/adhd.exe/css/homepage.css" />
+
+   <!--Google Fonts-->
+   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+   <link href='https://fonts.googleapis.com/css?family=Cherry Bomb One' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Butcherman' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Gaegu' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Jua' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Butcherman' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="window" style="width: 100%">
+      <div class="title-bar">
+        <div class="title-bar-text">ADHD Explorer</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+
+      <div class="window-body">        
+         <div class="menubar">
+          <!--NAV BAR-->
+          <div class="dropdown-v1">
+            <a  class="dropbtn-v1" id="menuitem-v1" style="margin-left: -10px;">File</a>
+            <div id="myDropdown-v1" class="dropdown-content-v1">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div> 
+
+        <!--#2-->
+        <div class="dropdown-v2">
+          <a  class="dropbtn-v2" id="menuitem-v2" style="margin-left: -10px;">Edit</a>
+          <div id="myDropdown-v2" class="dropdown-content-v2">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+          </div>
+        </div> 
+
+      <!--#3-->
+      <div class="dropdown-v3">
+        <a onclick="myFunctionV3()" class="dropbtn-v3" id="menuitem-v3" style="margin-left: -10px;">History</a>
+        <div id="myDropdown-v3" class="dropdown-content-v3">
+            <a href="#home">Haha</a>
+            <a href="#about">No</a>
+            <a href="#contact">Way...</a>
+        </div>
+      </div> 
+
+      <!--#4-->
+      <div class="dropdown-v4">
+        <a  class="dropbtn-v4" id="menuitem-v4" style="margin-left: -10px;">Help</a>
+        <div id="myDropdown-v4" class="dropdown-content-v4">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div> 
+    
+
+        <!--END-->
+
+        </div>
+
+        <hr class="solid" style="border-top: 0.5px solid #bbb;">
+
+          <div class="toolbarone">
+              <ul id="menu">
+                <li class="toolbarfont"><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/Back.fd37b37c809d37e43122.png" alt="back">Back</li>
+                <li><img class="toolbar-widgets-img" src="https://cdn-icons-png.flaticon.com/512/60/60995.png" alt="arrow" style="height: 10px; width: 10px;"></li>
+                <li><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/Forward.93e4591ae744e301f243.png" alt="forward"style="margin-right: 30px;"></li>
+                <li><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/IE%20Stop.3856f58c24c04aec8a52.png" alt="cancel"></li>
+                <li><img onclick="location.reload();" class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/IE%20Refresh.09c36909f775349346b3.png" alt="refresh" style="cursor: pointer;"></li>
+                <li><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/IE%20Home.59bab40e9bbaa8afb895.png" alt="home" style="margin-right: 30px;"></li>
+                <!-- <div class="vertical-divider" style="border-left: 0.5px solid #bbb; height: 50px;"></div> -->               
+                
+                <li><button class="toolbarbtn"><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/Email.327a9141027059198a48.png" alt="mail">Mail</button></li>
+                <li><button class="toolbarbtn"><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/Search.a0cca449c37211f211d1.png" alt="search">Search</button></li>
+                <li><button class="toolbarbtn"><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/Favorites.7b3b6dec7fad98980dea.png" alt="favourites">Favourites</button></li>
+                <li><button class="toolbarbtn"><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/IE%20History.0c5c276d7978cc10b453.png" alt="history">History</button></li>
+                               
+                <!--<div class="vertical-divider"></div>-->
+                             
+                <li><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/Printer.35cbedb7000b16965e5f.png" alt="printer" style="margin-left: 30px;"></li>
+                <li><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/IE%20Discuss.d9ac44103d60488c1375.png" alt="discussion"></li>
+                <li><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/Additional%20Settings.8a280665ad711b5273a1.png" alt="settings"></li>
+                <li><img class="toolbar-widgets-img" src="https://lordmicrowave.github.io/sim/static/media/Connection%20Status.59d8f72b6926de7d290e.png" alt="connection"></li>
+              </ul>              
+            </div>
+
+            <hr class="solid" style="border-top: 0.5px solid #bbb;">
+
+            <div class="toolbartwo">
+              <ul id="menu">
+                <li class="toolbarfont" style="padding-right: 10px;">Address</li>
+                <li class="toolbarfont"><img class="toolbar-widgets-img-2" src="https://lordmicrowave.github.io/sim/static/media/URL.2065e2547b2ba5a06d70.png" alt="urlicon"> 
+                  <select class="searchbar">
+                    <option>https://adhdsimulator.com</option>
+                    <option>https://adhdsimulator.com/zoneout</option>
+                    <option>https://adhdsimulator.com/app/Hyperfocus#Terminal</option>
+                    <option>https://adhdsimulator.com/to-do/list.asp?filename=to_do_list</option>
+                    <option>https://adhdsimulator.com/sensory-overload-3900231090</option>
+                    <option>https://adhdsimulator.com/daydreaming</option>
+                    <option>https://adhdsimulator.com/adhd-hyperfixation-the-phenomenon-of-extreme-focus</option>
+                  </select>
+                  <img class="toolbar-widgets-img-2" src="https://lordmicrowave.github.io/sim/static/media/Go.abfb42e2b7fff2903a01.png" alt="go">Go 
+                </li>
+                
+                <li class="toolbarfont" style="padding-left: 10px;">Links <img class="toolbar-widgets-img-2" src="https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/DoubleChevronRight-1024.png" alt="urlicon"></li>
+              </ul> 
+            </div>
+      
+        <!--Tabs window-->
+        <!-- tabs -->
+        <section class="tabs" style="max-width: 100%">
+          <menu role="tablist" aria-label="Sample Tabs">
+            <button role="tab" aria-selected="true" aria-controls="tab-A">Homepage</button>
+
+
+            <button role="tab" aria-controls="tab-B" class="tooltip">Zoned Out
+              <span class="tooltiptext">I'm sorry what?</span>
+            </button>
+
+            <button role="tab" aria-controls="tab-C" class="tooltip">Hyperfocus
+              <span class="tooltiptext">19 hrs of total absorption completing one task</span>
+            </button>
+           
+            <button role="tab" aria-controls="tab-D" class="tooltip">Mental To-Do List
+              <span class="tooltiptext">Time to get sh*t done</span>
+            </button>
+
+            <button role="tab" aria-controls="tab-E" class="tooltip">Sensory Overload
+              <span class="tooltiptext">Everything is so bright</span>
+            </button>
+
+            <button role="tab" aria-controls="tab-F" class="tooltip" class="tooltip">Daydreaming
+              <span class="tooltiptext">What's on your mind, friend?</span>
+            </button>
+
+            <button role="tab" aria-controls="tab-G" class="tooltip">Reading
+              <span class="tooltiptext">Don't skip pages for spoilers</span>
+            </button>
+
+            <button role="tab" aria-controls="tab-H" class="tooltip">Memories
+              <span class="tooltiptext">Unable to execute file in the Memory directory<br>Setup aborted.<br>Error 5: Access denied.</span>
+            </button>
+
+            <button role="tab" aria-controls="tab-I" class="tooltip">+
+              <span class="tooltiptext">New tab</span>
+            </button>
+          </menu>
+
+          <!-- the tab content -->
+           <!-- Homepage -->
+          <article role="tabpanel" id="tab-A">
+            <div class="homepage-background"></div>
+                 
+            <div class="homepage-container">
+              <div class="header">
+                <img src="https://lordmicrowave.github.io/sim/static/media/adhdlogo.9755682c0b32ad3e9d6f.png" style="height: 300px; width: 300px;">               
+              </div>
+              
+              <div class="row">
+                <div class="leftcolumn">
+                  <div class="card">
+                    <img src="https://web.archive.org/web/20091024094134/http://www.geocities.com/liquordepot1/welcome13d.gif">
+                    <h5>About the simulator. Aug 10, 2024</h5>
+                    <div class="fakeimg" style="height:200px;"><img style="height: 200px; width: 100%;" src="/Users/sasha-leemorare/Documents/adhd.exe/images/homepage/welcomegif.gif"></div>
+                    <p>Welcome to the <b>ADHD Simulator</b> landing page! Dive into a collection of <i><b>interactive artworks</b></i> 
+                      that simulate various states associated with ADHD, all while enjoying the nostalgic vibes of early <b>2000s 
+                      internet culture.</b>
+                    </p> 
+                    <p>This simulator offers a personal anecdote of my experiences with ADHD and insights shared by 
+                    others, diagnosed or not.
+                    </p> 
+                    <p><b>Please note</b>, this is purely a visual interpretation of some symptoms and does not 
+                    represent the full spectrum of ADHD experiences. This tool is <b>not intended for diagnosis</b>; for an accurate 
+                    assessment, please consult a qualified healthcare professional.
+                    </p> 
+                    <p>Now enter the simulator and explore the complexities of living with ADHD!
+                      <br><br>
+                      <i>Enjoy!</i>
+                    </p>                    
+                  </div>
+                  <div class="card">
+                    <img src="https://web.archive.org/web/20091027104828/http://www.geocities.com/jayneswestlifewebsite/Navigation_12266.gif">
+                    <h5>Tips for navigating the simulator. Aug 10, 2024</h5>
+                    <div class="fakeimg" style="height:200px;"><img style="height: 200px; width: 100%;" src="https://web.archive.org/web/20091027055759/http://geocities.com/Vienna/8041/microsoft_tv1.gif"></div>
+                    
+                    <p>Click on each browser tab e.g <b>Hyperfocus, Reading, etc.</b> to explore visual representations 
+                      of what it feels like to have ADHD.
+                      Actually, everything on this site is interactive so click on anything and everything!
+                      <br><br>
+                      <b>NOTE:</b> If you want to reset the simulator, hit the <b>refresh button</b> <img src="https://lordmicrowave.github.io/sim/static/media/IE%20Refresh.09c36909f775349346b3.png" style="height: 20px; width: 20px;"> to reload the page. 
+                      <br><br>
+                      <b>CAUTION!</b> As anyone with ADHD will tell you about what's going on in their mind, there's a lot 
+                      of going ons. So, if you get overwhelmed, feel free to step away from the simulation.
+                    </p>
+                  </div>
+                </div>
+                <div class="rightcolumn">
+                  <div class="card">
+                    <h2><img src="/Users/sasha-leemorare/Documents/adhd.exe/images/homepage/about.png" style="height: 100px; width: 250px;"></h2>
+                    <div class="fakeimg" style="height:300px;"><img style="height: 300px; width: 100%;" src="/Users/sasha-leemorare/Documents/adhd.exe/images/homepage/biscuit.jpg"></div>
+                    <p>Hi there, I'm <b>Sasha-Lee</b>! I'm a 26y.o artist and game designer from JHB.                     
+                    </p> 
+                      <p>My artistic inspiration comes from <b>glitch art, AR, vaporwave, 
+                        and mixed media</b>. I love to experiment with various art forms, ranging from traditional 
+                        collage art to interactive digital creations.
+                      </p> 
+                      <p>Diagnosed with ADHD in 2018, I have been passionate about finding unique ways to 
+                        spread awareness and create a deeper understanding of the ADHD experience. My 
+                        mission is to highlight the realities of living with ADHD 
+                        through my art. 
+                      <p>A <b>fun fact</b> about me: my recent hyperfocus has been watching the movie 
+                      Ride Along every day for the past two months XD
+                    </p> 
+                    
+                  </div>
+
+                  <div class="card">
+                    <h3><img src="/Users/sasha-leemorare/Documents/adhd.exe/images/homepage/sites.png" style="height: 100px; width: 270px;"></h3>                    
+                    <div class="fakeimg"><img class="fakeimg" src="https://lordmicrowave.github.io/sim/static/media/havingadhd.e4292f458084eb268e82.png">
+                      <a href="https://www.mayoclinic.org/diseases-conditions/adult-adhd/symptoms-causes/syc-20350878" target="_blank"><img src="https://web.archive.org/web/20091022031821/http://www.geocities.com/nsu1gib/question_md_clr.gif" style="height: 20px; width: 20px; margin-right: 5px;">What is ADHD?</a>
+                    </div><br>
+                    <br><br><br>
+
+                    <div class="fakeimg"><img class="fakeimg" src="https://assets.awwwards.com/awards/external/2019/03/5c9b56a095651539343372.jpg">
+                      <a href="https://www.cameronsworld.net/" target="_blank"><img src="https://www.cameronsworld.net/favicon-32x32.png" style="height: 20px; width: 20px; margin-right: 5px;">Cameron's World</a>
+                    </div><br>                   
+                    <br><br><br>                   
+                  </div>
+
+                  <div class="card">
+                    <h3><img src="/Users/sasha-leemorare/Documents/adhd.exe/images/homepage/contact.png" style="height: 100px; width: 250px;"></h3>
+                    <p>Instagram: <a href="https://www.instagram.com/nakedmariebiscuit/"> @nakedmariebiscuit</a></p>
+                    <p>Email: <a href="mailto:sashaleewebstermorare@gmail.com">sashaleewebstermorare@gmail.com</a></p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="footer">                               
+                <div class="row">
+                  <div class="column" style="background-color:#ff98e9;">
+                    <!-- Credits and Collaborations -->
+                      <div class="footer-credits">
+                        <h4>Credits</h4>
+                        <p> Archived websites sourced via <a href="https://web.archive.org/" target="_blank"> Wayback Machine</a></p>
+                        <p> Graphics via <a href="https://gifcities.org/" target="_blank"> GifCities</a>, <a href="https://giphy.com" target="_blank">Giphy</a>, <a href="https://photofunia.com/effects/retro-wave" target="blank">Photofunia</a>, <a href="https://makewordart.com">Make WordArt</a> and <a href="https://textstudio.com" target="_blank">TextStudio</a></p>
+                        <p> Backend by Sasha-Lee Webster-Morare, JS <a href="https://codepen.com">Codepen</a></p>
+                        <!--<p> Background FX by Sasha-Lee Webster-Morare</p>-->
+                      </div>                   
+                  </div>
+                  <div class="column" style="background-color:#ff98e9;">
+                    <!-- Credits and Collaborations -->
+                    <div class="footer-credits">
+                      <h4>ADHD.exe</h4>
+                      <p>By Sasha-Lee Webster-Morare</p>
+                      <p>Created with HTML, CSS, and JS</p>
+                      <br>
+                    </div>
+                    <!-- Copyright Information -->
+                  <div class="footer-copyright">
+                    <p>2024 <b>nakedmariebiscuit</b></p>
+                  </div>
+                  </div>
+                  <div class="column" style="background-color:#ff98e9">
+                    
+                    <div class="footer-credits">
+                      <h4>Artist Info</h4>
+                      <p><a href="/Users/sasha-leemorare/Documents/adhd.exe/pages/statement.html">Artist Info</a></p>
+                      <!--<p>Portfolio</p>-->
+                      <p><a href="/Users/sasha-leemorare/Documents/adhd.exe/pages/disclaimer.html">Disclaimer</a></p>
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </article>
+
+          <!-- Zoned Out -->
+          <article role="tabpanel" hidden id="tab-B">
+
+            <div class="cursor-container" id="cursorContainer">
+              <!-- Overlay container -->
+              <div class="centre">Did someone say something?</div>
+              <div class="centre-hide"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWk1aHo1bmJoaWoyczk1a244bHp3bnl5Mms2ZW9qdnc0MTBya2pqeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FkUyGd7FDh1gk/giphy.webp" style="box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);"></div>
+
+              <div class="topLeft">What?</div>
+              <div class="topLeft-hide"><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOW1lOTA2MTEzN3NpZHFmejZtOTVtOGVueDdubGh6anJ6ZDQ0NWJxbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dHM/61Z7884wb4NrtMFhyw/giphy.webp"></div>
+
+              <div class="topRight">Mhm?</div>
+              <div class="topRight-hide"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjVoYXZ3NXl4Mm4yODk0cDY2M2p1Z3h1cmRlZGVlNTY5YjZkdHZ1MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1J9EdzfOSgfyueLm/giphy.webp"style="box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);"></div>
+
+              <div class="bottomLeft">??!?!??</div>
+              <div class="bottomLeft-hide"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDI4emNtZXAwbmpmZGZkc253bnF5MXRtYmN6ODY5ZmwxcmdqZ3F3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ph0oIVQeuvh0k/giphy.webp" style="box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);"></div>
+
+              <div class="bottomRight">Huh?</div>
+              <div class="bottomRight-hide"><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExenNhejkyaDl0em9vM3h3ODRwdGgzdDJiNXh1ZnRyNTk3OG10dXRydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dHM/L1KEfAKqL86YSrYh8c/giphy.webp"></div>
+
+              <div class="tv-static"></div>
+              <div class="tv-static-two"></div>
+            </div>   
+  
+            <script src="/Users/sasha-leemorare/Documents/adhd.exe/scripts/ghostCursor.js"></script>         
+          </article>
+
+          
+
+          <!-- Hyperfocus -->
+          <article role="tabpanel" hidden id="tab-C">
+
+            <div id="alertModal" class="modal">
+              <div class="modal-content">
+
+                <div class="window" style="width: 300px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">PREFONTAL CORTEX ALERT</div>
+                    <div class="title-bar-controls">                     
+                      <button aria-label="Close" class="close-button" onclick="closeModal()"></button>
+                    </div>
+                  </div>
+                  <div class="window-body" style="padding: 10px;">
+                    <img src="file:///Users/sasha-leemorare/Documents/adhd.exe/images/icons/Alert.png" style=" float:left; height: 30px; width: 30px;">
+                    <p id="alertMessage">Warning: Executive Functions have been impaired. Please refresh.</p>
+                    <button class="ok-button" id="okButton" onclick="closeModal()">Dismiss</button>
+                  </div>
+                </div>
+                  
+              </div>
+            </div>
+            <script src="/Users/sasha-leemorare/Documents/adhd.exe/scripts/hyperfocus.js"></script>
+              
+            <div id="typewriter"></div>
+
+            <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+              <script type="text/javascript">
+                const instance = new Typewriter('#typewriter', {
+                  strings: ['C:/Users/DemoUser> hyperfocus.exe<br><br>Initializing Hyperfocus Mode...<br>Loading environment variables...<br><br>[INFO] Setting hyperfocus_duration to "4 hours"<br>[INFO] Enabling deep_concentration module<br>[INFO] Engaging task_immersion protocol<br>[INFO] Boosting motivation_level to "100%"<br><br>Hyperfocus Mode Active. Welcome to Flow State.<br><br>Scanning for tasks...<br>[TASK]How to get your pet a passport<br>...<br><br>','Allocating resources...<br>[RESOURCE]  (Working) Memory: 8GB for long-term retention<br>[RESOURCE] Processing Power: 90% CPU for task execution<br>[RESOURCE] Focus: 95% directed towards current task<br>[RESOURCE] Distraction Filter: Enabled', 'Debug1: losing track of time: awareness + surroundings<br>Debug1: dopamine levels elevated<br><br>Commencing Task Execution...<br>[TASK]Deep dive into airport animal protocol<br>[STATUS]Pet Immigration Specialist<br>[STATUS]Integrating findings into knowledge base<COMPLETE> Task execution successful.', 'Monitoring focus levels...<br>gpg: checking concentration levels<br>gpg:  depth: 0 valid: 5 signed: 5 trust: 0-, 0q, 0n, 0f<br>key fingerprint = 7F0C 9FC5 YMCA 2104<br>[INFO] Motivation_level remains high<br>[INFO] External_distractions minimal<br>[INFO] Task efficiency: Optimal'],
+                  autoStart: true,
+                  loop: true,
+                });
+              </script>
+            
+          </article>
+          
+
+          <!-- Mental To-Do List -->
+          <article role="tabpanel" hidden id="tab-D">
+
+            <!--Trigger/Open the modal-->
+            <div id="retryBtn">
+              <button>Retry</button>
+            </div>
+            
+            <div id="retryBtn">
+              <div class="progress-container" id="progress-container" style="display: none;">
+                <progress id="progress-bar" max="100" value="0"></progress>
+              </div>
+            </div>
+
+            
+            <!--the modal itself-->
+            <div id="retryModal" class="retryModal">
+
+              <!--The modal content-->
+              <div class="retry-modal-content">
+                <div class="window" style="width: 300px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">SYSTEM ERROR</div>
+                    <div class="title-bar-controls">                     
+                      <button aria-label="Close" class="close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/icons/Critical.png" style=" float:left; height: 30px; width: 30px;">
+                    <p>Error! Brain failed to retrieve list</p>
+                    <button class="ok-button">OK<span class="close"></span></button>
+                  </div>
+                </div>
+              </div>
+              <script src="/Users/sasha-leemorare/Documents/adhd.exe/scripts/progressBar.js"></script>
+            </div>
+
+            <div class="imageContainer">
+              <img id="bsodBackground" src="https://lordmicrowave.github.io/sim/static/media/ADHDbsod.a0414910f368f3f6c1c3.gif" style="width: 100%; height: 100%; z-index: 1;">                
+            </div>       
+          </article>
+
+          <!-- Sensory Overload -->
+          <article role="tabpanel" hidden id="tab-E">
+            <div style="background-image: url(https://web.archive.org/web/20090730183140/http://hk.geocities.com/chauyaucho/background.gif); height: 400vh; width: 100%;background-repeat: repeat;"></div> 
+            
+            <div class="landing-container">
+              <img class="top-ad" src="https://web.archive.org/web/20020227114045if_/http://geocities.com:80/ibprizedept/games.gif" style="display: block; margin-left: auto; margin-right: auto; ">
+              <img class="secondTop-ad" src="https://web.archive.org/web/20090902204233/http://geocities.com/mysamplesph/winnerClaimHere.gif" style="display: block; margin-left: auto; margin-right: auto; ">
+              <img class="leftSide-links" src="https://web.archive.org/web/20091027072138/http://geocities.com/celebrities2k1/links/14_final.gif" style="display: block; margin-left: auto; margin-right: auto; ">
+                
+              <div class="links-container">                 
+                  <img class="cool-links" src="https://web.archive.org/web/20091026005228/http://geocities.com/PicketFence/7333/coollink.gif" style="display: block; margin-left: auto; margin-right: auto; height: 100px; width: 150px; padding-top: 10px;">
+                  <ul class="links-list">
+                    <li><a href="https://web.archive.org/web/20090902215558/http://geocities.com/nkvd101/Enter_rave.html" target="_blank">Raveaholics</a></li>
+                    <li><a href="https://web.archive.org/web/20091027001729/http://geocities.com/ashleymons/" target="_blank">Hodgepodge</a></li>
+                    <li><a href="https://web.archive.org/web/20090729134945/http://geocities.com/webscoollinks/" target="_blank">Webs Cool Links</a></li>
+                    <li><a href="https://web.archive.org/web/20050815180900/http://www.geocities.com/SoHo/Museum/5026/advert.gif" target="_blank">Resources</a></li>
+                    <li><a href="https://web.archive.org/web/20091027134428/http://geocities.com/adtonson/index_files/contact_us.htm" target="_blank">Computers</a></li>
+                </ul>
+                </div>
+              <img class="rightSide-ad" src="https://web.archive.org/web/20091027054106im_/http://uk.geocities.com/stuarthomegame@btinternet.com/120x600_marlon_2m.gif" style="display: block; margin-left: auto; margin-right: auto; ">
+              <img class="secondrightSide-ad" src="https://web.archive.org/web/20051029122737/http://www.geocities.com/hubbub333/advert_bratz.gif" style="display: block; margin-left: auto; margin-right: auto; ">
+              <!--<img class="broken-ad" src="https://web.archive.org/web/20091027054106im_/http://www.splatsearch.com/images/tsplat.gif" style="display: block; margin-left: auto; margin-right: auto; "> -->
+              <img class="questiongif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWFnZWRidjIyeTd5bnVxajBob3pqaWl5cjd5NXlhNnFwaWRicDR1ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/l378xVg7JY3tefx3W/200w.webp" style="display: block; margin-left: auto; margin-right: auto; height: 100px; width: 100px;">
+              <img class="sensoryheader" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXl3bmRoN3V3em1yMWQ4bmlwYTdxNWtwOWowYnEzYjJzN2k0dHhsMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dHM/jV0k0iardwrsfSnzlx/200.webp" style="display: block; margin-left: auto; margin-right: auto;">
+              <img class="mainimage" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTJ4MHg0YWR6ZXo5a3F0ZDV2eWIycjd3amJtNDd6d2dndjNkZTBieiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2rqEdFfkMzXmo/giphy.webp" style="display: block; margin-left: auto; margin-right: auto;">
+                                         
+              
+              <div class="mainText-container">
+                  <p class="main-text">Welcome to Sensory Overload World!<br> This page is dedicated to learning all about sensory overload
+                     in a way<br> that is engaging and fun. We take the boring out of textbook research and transform it<br>
+                     into something cool! 
+                     <br>
+                     <br>
+                     P.S. We've got a cool educational game that teaches you all about sensory overload. Check it out!
+                     <br>
+                     <br>
+                     Bookmark this page so you don't cry over losing it!
+                     <br> 
+                     <img class="questiongif" src="https://web.archive.org/web/20050322001412/http://www.geocities.com:80/ashleymons/bookmark.gif" style="display: block; margin-left: auto; margin-right: auto; height: 70px; width: 150px; cursor: pointer;">                    
+                  </p>
+                  <div class="menu-container">
+                    <div class="menu-item">
+                        <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/sensoryoverload/pagebutton.png" alt="page button">
+                        <p class="page-button" style="cursor: pointer;">Definition</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/sensoryoverload/pagebutton.png" alt="page button">
+                        <p class="page-button">Play Game</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/sensoryoverload/pagebutton.png" alt="page button">
+                        <p class="page-button">Info</p>
+                    </div>                   
+
+                    <div class="menu-item">
+                        <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/sensoryoverload/pagebutton.png" alt="page button">
+                        <p class="page-button">Guestbook</p>
+                    </div>
+                  </div>
+                </div>
+              
+              <img class="bottom-ad" src="https://web.archive.org/web/20091027123902im_/http://geocities.com/drwlinks/players/pictures/banner.gif" style="display: block; margin-left: auto; margin-right: auto; ">
+              <img class="secondBottom-ad" src="https://web.archive.org/web/20090730151651im_/http://geocities.com/CapeCanaveral/9768/prizewindow.gif" style="display: block; margin-left: auto; margin-right: auto; ">
+            </div>
+
+            <div class="sticky-ad">
+              <p style="float: right; font-size: 15px; cursor: pointer;">X</p>
+              <img src="https://web.archive.org/web/20090831055929/http://geocities.com/caesarfrankmagnus/wwinner.gif" style="height: 200px; width: 250;">
+            </div> 
+
+            <!--ghost window-->
+            <div class="container">
+              <img id="ghost-image" src="/Users/sasha-leemorare/Documents/adhd.exe/images/sensoryoverload/nervoussystem.png" alt="Window Image">
+            </div>
+            <script src="/Users/sasha-leemorare/Documents/adhd.exe/scripts/ghostWindow.js"></script>
+
+            <!--flash window-->
+            <div class="flash-container" id="gameContainer">
+              <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/sensoryoverload/crashreport.png" alt="Flashing Image" class="flash-image">
+            </div>
+            <script src="/Users/sasha-leemorare/Documents/adhd.exe/scripts/flashWindow.js"></script>
+            
+            <!--dvd window-->
+            <div class="dvd-container" id="dvdContainer">
+              <svg id="logo" width="100" height="100" viewBox="0 0 100 100" xmlns="https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg">
+                  <!-- Your SVG logo here -->
+                  <rect width="100" height="100" fill="currentColor" />
+              </svg>
+            </div>
+            <script src="/Users/sasha-leemorare/Documents/adhd.exe/scripts/dvdWindow.js"></script>           
+          </article>
+
+          <!-- Daydreaming -->
+          <article role="tabpanel" hidden id="tab-F">
+            <div class="daydreaming-container" id="sparkleContainer">
+              <!-- Content inside your container -->
+               <!-- #2 XP DESKTOP ONE-->
+               <div class="desktopOne-container">
+                <img src="https://www.newegg.com/insider/wp-content/uploads/windows_xp_bliss-wide.jpg">
+                <img src="https://web.archive.org/web/20090902222904/http://geocities.com/yudifiles6/xp-loading-bl.gif">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/floppy_disk.gif">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/Explorer.png">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/Scheduled Tasks.png">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/Delete Confirmation.png">               
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/icons/My Videos.png">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/icons/My Pictures.png">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDZkamZoeDdkZjk3MjlnNWNoZHNsd3N2ajdzaml0cDZqN2g1OWd3YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dHM/RnOmsm0iDJb4JZGCN9/giphy.webp">
+
+                <div class="folder-text">
+                  <p class="folder-text-two"> My deepest<br> darkest<br> secrets</p>
+                  <p>Unhealed<br> trauma</p>
+                  <br><br><br>
+                  <p>Unfinished<br> DIY<br> Projects</p>
+                  <br><br>
+                  <p>Mem'ries</p>
+                  <br><br><br><br>
+                  <p>Fantasies</p>
+                  
+                </div>
+                
+              </div>
+
+               <!--#3 XP DESKTOP TWO-->
+               <div class="desktopTwo-container">
+                <img style="position: absolute;" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2VwcmdxOTlqa2xhZGh2bGQyaWw0ajY1bTR3YnA3YnY2bTgyZXh5bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dHM/7gqy0HJiVuz4cVsyEl/giphy.webp">
+                <img style="position: absolute;" src="https://64.media.tumblr.com/924fc9598f6fab01965998282a6c3261/tumblr_nq65uj7gk71tslewgo1_400.gifv"> 
+                <img style="position: absolute;" src="https://web.archive.org/web/20091027103109/http://geocities.com/artevidrio/animated-border-rainbowthin.gif">
+                <img style="position: absolute;" src="https://web.archive.org/web/20090729110738if_/http://www.geocities.com/stretched_on_your_grave/badcd001.gif">
+                <img style="position: absolute;" src="https://web.archive.org/web/20070415231331/http://www.geocities.com/djlogan910/television_testpattern_md_clr.gif">
+                <img style="position: absolute;" src="https://web.archive.org/web/20090820123014im_/http://geocities.com/gundamjavelin3/gundamseed/astrayredframe.gif">
+                
+                
+                <!--Memory Window-->
+                <div class="window" style="width: 400px; position: absolute; top: 50px; left: 200px;">
+                  <div class="title-bar">
+                    <div class="title-bar-text">Mind Storage (C:)</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <menu role="tablist">
+                      <button aria-selected="true" aria-controls="music">Storage</button>
+                      <button aria-controls="dogs">Anxiety Files</button>
+                      <button aria-controls="food">Thoughts Cache</button>
+                    </menu>
+                    <article role="tabpanel" id="music">
+                      <div class="field-row">
+                        <label for="text21"><img style="height: 40px; width: auto;" src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/Removable Media.png"></label>
+                        <input id="text21" type="text" />
+                      </div>
+
+                      <hr class="solid" style="border-top: 0.5px solid #bbb;">
+
+                      <div class="field-row-stacked">
+                        <div class="first-row">
+                          <div class="first-column">
+                            <p>Type:</p>
+                            <p>File system:</p>
+                          </div>
+                          <div class="first-column">
+                            <p>Local disk</p>
+                            <p>ADHD</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <hr class="solid" style="border-top: 0.5px solid #bbb;">
+                        
+                        <div class="storage-row">
+                          <div class="storage-column">
+                            <p><img style="height: 15px; width: auto; padding-right: 5px;" src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/square-blue.png">Used space:</p>
+                            <p><img style="height: 15px; width: auto; padding-right: 5px;" src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/square-pink.png">Free space:</p>
+                          </div>
+                          <div class="storage-column">
+                            <p>16,693,321,728 bytes</p>
+                            <p>35,734,571,152 bytes<p>
+                          </div>
+                          <div class="storage-column">
+                            <p>15.5GB</p>
+                            <p>33.2GB</p>
+                          </div>
+                        </div>
+                      
+                      <hr class="solid" style="border-top: 0.5px solid #bbb;">
+                                                     
+                        <div class="storage-row">
+                          <div class="storage-column">
+                            <p>Capacity:</p>
+                          </div>
+                          <div class="storage-column">
+                            <p>52,427,898,880 bytes</p>
+                          </div>
+                          <div class="storage-column">
+                            <p>48.8GB</p>
+                          </div>
+                        </div>
+                        <div class="field-row-stacked">
+                          <img style="height: 100px; width: auto; align-items: center;" src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/pie_updated.png">
+                          <p style="text-align: center; font-family: Pixelated MS Sans Serif;">Drive C</p>
+                          <button>Disk cleanup</button>                     
+                        </div>
+                      
+                      <hr class="solid" style="border-top: 0.5px solid #bbb;">
+
+                      <div class="field-row">
+                        <input type="checkbox" id="example1">
+                        <label for="example1">Free Up Mental Space</label>
+                      </div>
+                      <div class="field-row">
+                        <input type="checkbox" id="example2">
+                        <label for="example2">Compress Anxiety Files</label>
+                      </div>                   
+                      </article>
+                
+                    <article role="tabpanel" hidden id="dogs">
+                      <img style="width: 100%" src="https://web.archive.org/web/20030409193631/http://www.geocities.com:80/cgmaxwell/computeremail.gif" />
+                    </article>
+                
+                    <article role="tabpanel" hidden id="food">
+                      <img style="width: 100%" src="https://web.archive.org/web/20030409193631/http://www.geocities.com:80/cgmaxwell/computeremail.gif" />
+                    </article>
+                    <section class="field-row" style="justify-content: flex-end">
+                      <button>OK</button>
+                      <button>Cancel</button>
+                    </section>
+                    </div>
+
+                  <!--ADHD TV-->
+                  <div class="window" style="width: 375px; height: auto; position: absolute; top: 30px; left: 500px;">
+                    <div class="title-bar">
+                      <div class="title-bar-text">ADHD TV</div>
+                      <div class="title-bar-controls">
+                        <button aria-label="Close"></button>
+                      </div>
+                    </div>
+                    <div class="window-body">
+                      <img style="height: 350px; width: auto;" src="/Users/sasha-leemorare/Documents/adhd.exe/sound/tv.gif">
+                    </div>
+                  </div>
+                </div>             
+               </div>
+
+               <!--#6 PORTAL-->
+              <div class="portal-container">               
+                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjczZW5nN3lhZWVrY3d1c3p5ejVocHQ0b2w5dWliYnRmN3kzZTVkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT39CTrFW4nHLdBPpu/giphy.webp">
+                <img src="https://lordmicrowave.github.io/sim/static/media/door.d43e7ec5784674e3db95.png">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/clouds.gif">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/overthink_text.gif">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/pink_clouds.png">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/pink_clouds.png">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/pink_clouds.png">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW9veXR1d3k3bDZzZDIweTRyN284M3dpMnNoanUyZmt4dHpuZGgyeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dHM/S992voe5poEduiTRrb/200.webp">
+                <img src="https://web.archive.org/web/20091027012125im_/http://hk.geocities.com/shine_star9075/enter.gif">
+              </div>
+              
+              <!--#7 MOVING BANNER-->
+              <div class="moving-container">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGY1Z3FveWk0ZjIxdmttY3l2ZG1seGg1MmI1ZHljMHAzYjM2NHY3MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/isqxY03RuhGxNbCPzY/giphy.webp">
+                <img src="https://web.archive.org/web/20091027103109/http://geocities.com/artevidrio/animated-border-rainbowthin.gif">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHR5MDJ6ZGYxNjNidW1keWtsZGpuODk2ZmVja3l4YWJ2OGgxZzFmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/xThta3O1xg90tQTVfi/200w.webp">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHR5MDJ6ZGYxNjNidW1keWtsZGpuODk2ZmVja3l4YWJ2OGgxZzFmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/xThta3O1xg90tQTVfi/200w.webp">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHR5MDJ6ZGYxNjNidW1keWtsZGpuODk2ZmVja3l4YWJ2OGgxZzFmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/xThta3O1xg90tQTVfi/200w.webp">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHR5MDJ6ZGYxNjNidW1keWtsZGpuODk2ZmVja3l4YWJ2OGgxZzFmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/xThta3O1xg90tQTVfi/200w.webp">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHR5MDJ6ZGYxNjNidW1keWtsZGpuODk2ZmVja3l4YWJ2OGgxZzFmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/xThta3O1xg90tQTVfi/200w.webp">
+              </div>
+
+              <!--#8 JOURNAL-->
+              <div class="journal-container">
+                <img src="https://i.pinimg.com/originals/95/29/15/95291529b58d093b28670d6629b81b5b.gif">
+                <img src="https://web.archive.org/web/20090820185528/http://geocities.com/oxoxhugsoxox/note.gif">
+                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2NoN29xb2doNXpydmF2Ym81dmhxaWo3eWxtd3lic3BnenlvbnloeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/DB4WyCiXVPOQpBFRLG/giphy.webp">
+                <img src="https://web.archive.org/web/20091026194331im_/http://geocities.com/gravemenu/dancing_skeleton-left.gif">
+                <img src="https://web.archive.org/web/20090729055116/http://www.geocities.com/ristycay/sparkle.gif">
+                <img src="https://web.archive.org/web/20090729055116/http://www.geocities.com/ristycay/sparkle.gif">
+                <img src="https://web.archive.org/web/20091019174646/http://uk.geocities.com/vcdjapav/heart_143.gif">
+                <img src="https://web.archive.org/web/20091022024457/http://www.geocities.com/newbluevwbugluva/flamingheart.gif">
+                <img src="https://web.archive.org/web/20091027082307/http://hk.geocities.com/jubilationjournal/heartline.gif">
+                <img src="https://web.archive.org/web/20090829195209/http://geocities.com/carolinerocks/journallinks.gif">
+                <img src="https://web.archive.org/web/20091025083742/http://www.geocities.com/soo24/suesjournal.gif">
+                <img src="https://web.archive.org/web/20090801012736if_/http://hk.geocities.com/jubilationjournal/picstar4.gif">
+                <img src="https://web.archive.org/web/20090821155630/http://geocities.com/Heartland/Pond/4531/Halloween/Images/hollogravebreak.gif">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/love_letter.GIF">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/gold-frame.png">
+                <img src="https://web.archive.org/web/20091021090737/http://www.geocities.com/chrisshaven2/doveright.gif">
+                <img src="https://web.archive.org/web/20090806003919/http://www.geocities.com/angel26580/doveofpeace.gif">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/daydreaming/sparkles1.jpeg">
+                <!--<img style="background-image: url(https://i.pinimg.com/originals/95/29/15/95291529b58d093b28670d6629b81b5b.gif); background-repeat: no-repeat; background-size: contain; z-index: -1;" src="https://i.pinimg.com/originals/95/29/15/95291529b58d093b28670d6629b81b5b.gif">-->
+                <!--<img src="https://web.archive.org/web/20091020104116if_/http://hk.geocities.com/ironterry_crystal/background/move_heart.gif">-->
+
+                <div class="journal-text">
+                  <p class="hope">but i dont know<br> how to grieve<br> hope</p>
+                  <a class="hopeless" href="https://web.archive.org/web/20091026194331/http://geocities.com/gravemenu/1.html" target="_blank">Hopeless Romantic</a>
+                  <p class="love-life">Here lies my love life</p>
+                </div>
+
+                <ul class="tree-view">
+                  <li><strong>Table of Contents</strong></li>
+                  <br>
+                  <li>All memos</li>
+                  <br>
+                  <li>
+                    Documents
+                    <ul>
+                      <li>Art Ideas</li>
+                      <li>Prep Lists</li>
+                      <li>Posted</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <details open>
+                      <summary>The Outbox</summary>
+                      <ul>
+                        <li>A collection of micropoems</li>
+                        <li>
+                          <details>
+                            <summary>WIP</summary>
+                            <ul>
+                              <li>Scattered pieces...</li>
+                              <li>
+                                <details>
+                                  <summary>Completed</summary>
+                                  <ul>
+                                    <li>It's Just Me</li>
+                                    <li>Unwarranted Hope</li>
+                                    <li>The sun came up...</li>
+                                    <li>Imagine my surprise</li>
+                                  </ul>
+                                </details>
+                              </li>
+                              <li>Zine Ideas</li>
+                              <li>Consecutive Texts</li>
+                            </ul>
+                          </details>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+                  <br>
+                  <li>Favourites</li>
+                  <br>
+                  <li>Trash</li>
+                </ul>
+              </div>
+            </div>
+            <script src="/Users/sasha-leemorare/Documents/adhd.exe/scripts/sparkleCursor.js"></script>        
+          </article>
+
+          <!-- Reading -->
+          <article role="tabpanel" hidden id="tab-G">
+            <div style="background-image: url(https://web.archive.org/web/20090729122146/http://www.geocities.com/sweet_sugar_daisy02/backgroundgalaxy.gif); height: 400vh; width: 100%;background-repeat: repeat;"></div> 
+              
+
+              <img class="page-decorator" src="https://web.archive.org/web/20090805045712im_/http://geocities.com/TimesSquare/Galaxy/1163/anistr1.gif">
+              <img class="page-decorator-two" src="https://web.archive.org/web/20090805045712im_/http://geocities.com/TimesSquare/Galaxy/1163/anistr1.gif">            
+              
+              <div class="text-container">                
+              <h1 class="heading">
+                <img class="compbanner" src="https://lordmicrowave.github.io/sim/static/media/compbanner.11727d3b654779e1095e.png" alt="computer">
+                <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/reading/adhdheader.png" style="display: block; margin-left: auto; margin-right: auto; height:300px; width: 350px;">
+                <img class="compbanner-flip" src="https://lordmicrowave.github.io/sim/static/media/compbanner.11727d3b654779e1095e.png" alt="computer-flipped">
+              </h1>
+              
+              <img src="/Users/sasha-leemorare/Documents/adhd.exe/images/reading/PHENOM1.png" style="display: block; margin-left: auto; margin-right: auto; ">
+              <h3 class="subheading">By <a href="https://add.org/adhd-hyperfixation/" target="_blank"><i>ADDA Editorial Team</i></a></h3>
+              <br>
+
+              <img class="text-divider" src="https://web.archive.org/web/20040524051901/http://www.geocities.com:80/hotdog_9890/aniblu_-cool-divider.gif"  style="display: block; margin-left: auto; margin-right: auto;">
+              
+              <div class="gradient-container">
+                <p class="gradient-text">
+                  Do you ever find yourself so deeply absorbed in what you’re doing that time flies by? Maybe it’s playing an instrument, reading a thrilling book, or learning a new skill.
+
+                  For non-ADHDers, this state of flow is an enjoyable or productive way to spend time. However, for those with attention-deficit/hyperactivity disorder (ADHD), periods of hyperfixation can be both a blessing and a curse.
+                  
+                  You’ll gain deep knowledge and experience in the subject or activity (positive). But you’ll also find yourself completely disengaged from everything else around you (problem).
+                  
+                  ADHD hyperfixation isn’t an official symptom of ADHD. In fact, it sounds contradictory to what ADHD is most widely known for – inattention and a lack of focus.[1]
+                  
+                  As you learn more about this condition, you’ll discover that ADHD isn’t actually an attention-deficit disorder. It’s more of an attention-abundance disorder. The challenge lies in learning to regulate and control it.
+                  
+                  When this wealth of attention isn’t managed well, you can experience what’s known as ADHD hyperfixation.
+                  
+                  The good news is that you can learn to recognize hyperfixation and find ways to keep it in check!
+                  
+                            
+                </p>
+              </div>
+              <br>
+              <div class="marquee">
+                <p>Hey. You. Over there. Focus. Keep reading...</p>
+              </div>
+              <br>
+              <br>
+              <div class="gradient-container">
+                <h3 class="gradient-text-reverse">Why Do People Hyperfixate?</h3>
+                <p class="gradient-text-reverse">
+                  Anyone can experience hyperfixation from time to time.
+                  
+                  When you’re doing something you really enjoy, it’s easy to lose track of time and become so engrossed that everything else fades away.
+                  
+                  However, research has found that these episodes are more frequent and intense in those with certain traits or conditions.[2]
+                  
+                  The following can cause or contribute to hyperfixation:
+                  When you’re doing something you really enjoy, it’s easy to lose track of time and become so engrossed that everything else fades away.
+                  
+                  However, research has found that these episodes are more frequent and intense in those with certain traits or conditions.[2]
+                  The following can cause or contribute to hyperfixation:
+                  However, research has found that these episodes are more frequent and intense in those with certain traits or conditions.[2]
+                  The following can cause or contribute to hyperfixation: The following can cause or contribute to hyperfixation: The following can cause or contribute to hyperfixation:
+                  The following can cause or contribute to hyperfixation: The following can cause or contribute to hyperfixation:
+                </p>
+              </div>
+
+              <div class="unique-text-container">
+                <h3 class="unique-fade-blur-text">ADHD Hyperfixation Vs. Hyperfocus</h3>
+                <p class="unique-fade-blur-text">          
+                  The terms ADHD hyperfixation and ADHD hyperfocus are often used interchangeably. However, they refer to two distinct phenomena.
+                  
+                  ADHD hyperfixation refers to an intense and prolonged state of focus on a particular activity or object. This may lead to happiness, satisfaction, and, at times, increased productivity.
+                  
+                  However, if it is not well managed, the person may invest more time and effort than they can afford. They may neglect their personal needs, tasks, and daily responsibilities.
+                  
+                  People with ADHD are more likely to experience hyperfixation compared to non-ADHDers.
+                  
+                  On the other hand, ADHD hyperfocus refers to being deeply focused on a certain task or activity. Anyone can tap into this “flow state.” When this happens, they become fully engaged with a task without inner worries, fatigue, or boredom.[2] , [4]
+                  
+                  Research also shows that this can increase productivity and is often linked to feelings of accomplishment.[4]
+                  
+                  While these two phenomena may be similar in some ways, hyperfixation is fueled by an intense passion or interest in the activity. In contrast, hyperfocus is task-driven and often accompanied by clear goals and a strong sense of direction.
+                  
+                  ADHD hyperfixation can be challenging to control and regulate. On the other hand, with hyperfocus, you can deliberately induce a “flow state” and tap in and out of it as you wish.[4]
+                </p>
+              </div>
+              <br>
+
+                <div class="marquee">
+                  <p>Phenomenon... Phenonmenon... pheno-phenonymen... pheno- ... phenomonoen</p>
+                </div>
+
+                <div class="gradient-container">
+                  <h3 class="gradient-text">Is Hyperfixation A Symptom Of ADHD? </h3>
+                  <p class="gradient-text">
+                    
+                      Hyperfixation is not an official symptom of ADHD that counts toward a diagnosis. That said, this experience can be associated with ADHD.
+                      <br>
+                      Say you get easily hyperfixated and this interferes with your daily life. In this case, it’s best to get 
+                      your symptoms assessed by a mental health professional, as it could be a sign of ADHD or another condition 
+                      like autism or OCD.
+                      <br>
+                      Say you get easily hyperfixated and this interferes with your daily life. In this case, it’s best to get 
+                      your symptoms assessed by a mental health professional, as it could be a sign of ADHD or another condition 
+                      like autism or OCD. Say you get easily hyperfixated and this interferes with your daily life. 
+                      Say you get easily distracted Say you get easily distracted Say you get easily distracted Say you get easily distracted
+                      Say you get easily distracted Say you get easily distractedSay you get easily distracted Say you get easily distracted 
+                      Say you get easily distracted Say you get easily distracted Say you get easily distracted Say you Say you Say you Say you
+                      Say you Say you Say you Say you Say you Say you Say you Say you Say you
+                    
+                      Say you get easily distracted
+                      
+                      Say you get easily distracted
+
+
+                    
+                  </p>
+                </div>                 
+              <br>
+
+              <img class="text-divider" src="https://web.archive.org/web/20040524051901/http://www.geocities.com:80/hotdog_9890/aniblu_-cool-divider.gif"  style="display: block; margin-left: auto; margin-right: auto;">
+              <br>
+              <!--text-->
+              <div class="wizard-container">
+                <img class="wizard" src="https://web.archive.org/web/20091027082755/http://www.geocities.com/mantissa3/wizz.gif" alt="Description of image" class="image">
+                <p class=" wizard-text">The adhd wizard casts<br> shame upon you</p>
+              </div>
+
+              <img class="email-icon" src="https://web.archive.org/web/20061031161350/http://www.geocities.com/chief_satiacum/email9.gif">
+              <span>Got questions? Send me an email at</span>     
+              <div class="popup-mail" onclick="toggleMailPopup()"><i><u><a id="wizard-email-link" style="cursor: pointer;">ihaveorthinkihaveadhd@hotmail.com</a></u></i>
+                <span class="popuptext-mail" id="mailPopup">Error 403: Mail server cannot be reached at this moment</span>
+              </div>
+        
+              <p class="footer-text">Page created 21 April 2007<br>Last updated 23 October 2009</p>
+            </div>            
+            </div>         
+          </article>
+
+          <!-- Memories -->
+          <article role="tabpanel" hidden id="tab-H">
+            <h3>buncha stuff</h3>
+            <div class="homepage-background"></div>          
+          </article>
+
+          <article role="tabpanel" hidden id="tab-I">         
+          </article>
+        </section>
+        
+        <!--Menubar Dropdown script-->
+        <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+
+        <!--TEST NAVBAR SCRIPT-->
+        <script>
+          function myFunctionV1() {
+              document.getElementById("myDropdown-v1").classList.toggle("show-v1");
+          }
+          
+          window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn-v1')) {
+                  var dropdowns = document.getElementsByClassName("dropdown-content-v1");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show-v1')) {
+                          openDropdown.classList.remove('show-v1');
+                      }
+                  }
+              }
+          }
+          </script>
+
+          <script>
+            function myFunctionV2() {
+                document.getElementById("myDropdown-v2").classList.toggle("show-v2");
+            }
+            
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn-v2')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content-v2");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show-v2')) {
+                            openDropdown.classList.remove('show-v2');
+                        }
+                    }
+                }
+            }
+          </script>
+
+          <script>
+            function myFunctionV3() {
+                document.getElementById("myDropdown-v3").classList.toggle("show-v3");
+            }
+            
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn-v3')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content-v3");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show-v3')) {
+                            openDropdown.classList.remove('show-v3');
+                        }
+                    }
+                }
+            }
+            </script>
+
+            <script>
+              function myFunctionV4() {
+                  document.getElementById("myDropdown-v4").classList.toggle("show-v4");
+              }
+              
+              window.onclick = function(event) {
+                  if (!event.target.matches('.dropbtn-v4')) {
+                      var dropdowns = document.getElementsByClassName("dropdown-content-v4");
+                      var i;
+                      for (i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show-v4')) {
+                              openDropdown.classList.remove('show-v4');
+                          }
+                      }
+                  }
+              }
+              </script>
+  
+  
+  
+        <!--END-->
+
+        <!-- Tabs script-->
+        <script src="file:///Users/sasha-leemorare/Documents/adhd.exe/scripts/script.js"></script>
+        <script src="file:///Users/sasha-leemorare/Documents/adhd.exe/scripts/modal.js"></script>
+        
+        <!--Retry Modal Script
+        <script>
+          // Get the modal
+          var modal = document.getElementById("retryModal");
+          
+          // Get the button that opens the modal
+          var btn = document.getElementById("retryBtn");
+          
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+          
+          // When the user clicks the button, open the modal 
+          btn.onclick = function() {
+            modal.style.display = "flex";
+          }
+          
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+            modal.style.display = "none";
+          }
+          
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+          </script>-->
+
+          <!--wizard modal script-->
+          <script>
+            // When the user clicks on div, open the popup
+            function toggleMailPopup() {
+                var popup = document.getElementById("mailPopup");
+                popup.classList.toggle("show-mail");
+            }
+          </script>
+
+          
+
+          <script src="/Users/sasha-leemorare/Documents/adhd.exe/scripts/typewriter.js"></script>
+          <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

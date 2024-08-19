@@ -1,0 +1,307 @@
+.no-outline{
+    background-color: rgb(169, 71, 71);
+  color: black;
+  border: 2px solid #bf3232;
+}
+
+.browser-headers{
+  position: relative;
+  right: 500px;
+    padding-top: 5px;
+  padding-right: 10px;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  padding-right: -50px;
+  font-family: "Pixelated MS Sans Serif";
+  font-size: 14px;
+  color: black;
+  cursor: default;
+}
+
+#disabled-headers{
+  color:#767575;
+}
+
+.key-box{
+  position:relative;
+  left: 30px;
+  width: 40px;
+  height: 35px;
+  background-color: white;
+}
+
+.key-icon{
+  position:relative;
+  height: 25px;
+  width: 25px;
+  left: 350px;
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-right: 10px;
+  cursor: pointer;
+  perspective: 200px;
+  transform: rotateY(45deg);
+	animation: rotateAnimation 1s linear infinite;
+}
+
+.level-two{
+  position: relative;
+  right: 200px;
+}
+
+.level-three{
+  position: relative;
+  right: 160px;
+}
+
+.nav-buttons{
+  
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
+.dropdown-arrow{
+  position: relative;
+  top: 5px;
+  height: 20px;
+  width: 20px;
+}
+
+.toolbar-widgets{
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 30px;
+  font-size: 14px;
+  text-align: right;
+}
+
+
+
+
+
+.widget-buttons{
+  margin-right: 5px;
+  height: 42px;
+  width: 150px;
+  background-color:blueviolet;
+  border: transparent;
+}
+
+.url-bar{
+    padding-top: 22px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+.wait{
+  cursor: wait;
+}
+
+.back-icon{
+  position: relative;
+  top: 15px;
+  left: 10px;
+  height: 30px;
+  width: 30px;
+  cursor:not-allowed;
+}
+
+.toolbar-widgets-img{
+  position: relative;
+  top: 15px;
+  left: 5px;
+  height: 37px;
+  width: 37px;
+}
+
+.toolbar-widgets-img-2{
+  position: relative;
+  padding-right: 10px;
+  top: 15px;
+  left: 5px;
+  height: 37px;
+  width: 37px;
+  cursor: not-allowed;
+}
+
+.back-text{
+  margin-left: 10px;
+  margin-right: 15px;
+  position:relative;
+  top: 1px;
+  left: 15px;
+  font-family: "Pixelated MS Sans Serif";
+  font-size: 14px;
+  cursor: not-allowed;
+}
+
+.toolbar-text{
+  margin-left: 5px;
+  margin-right: 30px;
+  position:relative;
+  top: 15px;
+  left: 10px;
+  font-family: "Pixelated MS Sans Serif";
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.address-text{
+  margin-left: 5px;
+  margin-right: 5px;
+
+  top: 1px;
+  left: 15px;
+  font-family: "Pixelated MS Sans Serif";
+  font-size: 14px;
+}
+
+.url-icon{
+  position: relative;
+  top: 10px;
+  left: 10px;
+  padding-right: 5px;
+  height: 20px;
+  width: 20px;
+  
+}
+
+.search-bar{
+  position: relative;
+  top: 8px;
+  left: 10px;
+  height: 24px;
+  width: 800px;
+}
+
+.go-icon{
+  position: relative;
+  top: 8px;
+  left: 15px;
+  height: 25px;
+  width: 25px;
+  cursor: progress;
+}
+
+.go-text{
+  position:relative;
+  left: 20px;
+  margin-right: 40px;
+  font-family: "Pixelated MS Sans Serif";
+  font-size: 14px;
+  cursor: progress;
+}
+
+.link-text{
+  position:relative;
+  left: 7px;
+  font-family: "Pixelated MS Sans Serif";
+  font-size: 14px;
+  color: #767575;
+  cursor: default;
+}
+
+.link-arrow{
+  position: relative;
+  top: 5px;
+  height: 20px;
+  width: 20px;
+}
+
+.go-button{
+ 
+  height: 30px;
+  
+}
+
+.refresh-icon{
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 5px;
+  height: 35px;
+  width: 35px;
+}
+
+.divider-space{
+  position: relative;
+  top: 10px;
+  width: 0.1px;
+}
+
+.status-bar{
+  height: 50px;
+}
+
+@keyframes rotateAnimation {
+	from {transform: rotateY(45deg);}
+	to {transform: rotateY(360deg);}
+}
+
+/* popup ad*/
+#myDIV{
+  position: absolute;
+  left: 40%;
+  top: 50%;
+}
+
+.dropdown-list{
+  position: absolute;
+  left: 177px;
+  top: 60px;
+  font-family: "Pixelated MS Sans Serif";
+  font-size: 14px;
+}
+
+/*hover dropdown*/
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

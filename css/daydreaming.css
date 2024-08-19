@@ -1,0 +1,751 @@
+/*MAIN CONTAINER*/
+.daydreaming-container {
+    position: relative;
+    width: 100%;
+    height: 400vh;
+    overflow-x: hidden; /*hidden overflow x and y hides the horizontal and vertical scrollbars respectively*/
+    overflow-y: hidden;
+    border: 2px solid #00000000; /* Just for visibility */
+    padding: 0px;
+    background-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnNlNWpxMmF1d2RqMHBub2ZiMGp5N2s2Y240aG53MG9qbm5sODQxbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Skv6LLzPcpxv3uEaCn/giphy.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background: linear-gradient(90deg, #EC72AB, #FB81BA, #FE97AC, #FEA8A9, #FEC4B9, #FED7D0);
+    background-size: 600% 100%; /* Adjust to control the gradient size */
+    /*animation: daydreamGradient 20s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes daydreamGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/*XP DESKTOP ONE*/
+.desktopOne-container{
+    position: relative; /*allows absolute positioning of images*/
+    width: 100%;
+    /*max-width: 600px; /*limit max-width of items*/
+    height: 500px; /*fixed height*/
+    overflow: hidden; /*hide any overflow*/
+    border: 2px solid #00000000; /*visibility*/
+    /*margin-bottom: 10px;*/
+    /*object-fit; contain; Maintain the aspect ratio without filling the container*/ 
+}
+
+.desktopOne-container img{
+    max-width: 100%; /* Image will not exceed the width of the container */
+    max-height: 100%; /* Image will not exceed the height of the container */
+    position: absolute; /* Positioning the images inside the container */
+    
+}
+
+/*positioning of .desktopOne-container images*/
+/*desktopOne images*/
+.desktopOne-container img:nth-child(1){
+    background-image: url(https://www.newegg.com/insider/wp-content/uploads/windows_xp_bliss-wide.jpg);
+    background-size: contain;
+    width: 100%;
+}
+
+/*loading bar*/
+.desktopOne-container img:nth-child(2){
+    left: 0px;
+    bottom: 0px;
+    height: 10px;
+    width: 100%;
+}
+
+/*floppy disk*/
+.desktopOne-container img:nth-child(3){
+  top: 60px;
+  right: 100px;
+  cursor: pointer;
+}
+
+/* trauma folder*/
+.desktopOne-container img:nth-child(4){
+    top: 50px;
+    left: 100px;
+    height: 60px;
+    width: auto;
+  }
+
+    /* projects folder*/
+.desktopOne-container img:nth-child(5){
+    top: 150px;
+    left: 100px;
+    height: 60px;
+    width: auto;
+  }
+
+  /* secrets folder*/
+.desktopOne-container img:nth-child(6){
+    top: 50px;
+    left: 220px;
+    height: 60px;
+    width: auto;
+  }
+
+  /* memories folder*/
+.desktopOne-container img:nth-child(7){
+    top: 250px;
+    left: 100px;
+    height: 60px;
+    width: auto;
+  }
+
+  /* fantasies folder*/
+.desktopOne-container img:nth-child(8){
+    top: 350px;
+    left: 100px;
+    height: 60px;
+    width: auto;
+  }
+
+/* illness text*/
+.desktopOne-container img:nth-child(9){
+    top: 140px;
+    left: 550px;
+    height: auto;
+    width: 300px;
+  }
+
+  .folder-text{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 13px;
+    text-align: center;
+    font-family: "Pixelated MS Sans Serif";
+  }
+
+  .folder-text-two{
+    position: absolute;
+    top: 0px;
+    left: 130px;
+
+  }
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/*XP DESKTOP TWO*/
+.desktopTwo-container{
+    position: relative; /*allows absolute positioning of images*/
+    width: 100%;
+    /*max-width: 600px; /*limit max-width of items*/
+    height: 700px; /*fixed height*/
+    overflow: hidden; /*hide any overflow*/
+    border: 2px solid #00000000; /*visibility*/
+    /*margin-bottom: 10px;*/
+    /*object-fit; contain; Maintain the aspect ratio without filling the container*/ 
+}
+
+.desktopTwo-container img{
+    max-width: 100%; /* Image will not exceed the width of the container */
+    max-height: 100%; /* Image will not exceed the height of the container */
+    /*position: absolute; /* Positioning the images inside the container */
+    /*object-fit: contain; /* Maintain the aspect ratio without filling the container */
+}
+
+/*positioning of .desktopTwo-container images*/
+/*desktopTwo images*/
+.desktopTwo-container img:nth-child(1){
+    top: 120px;
+    right: 10px;
+    height: 250px;
+    width: auto;
+    z-index: 999;
+}
+
+.desktopTwo-container img:nth-child(2){
+    background-image: url(https://cdn.dribbble.com/users/95872/screenshots/819524/media/7068ad1f4b99320a033d52e974011e35.gif);
+    background-size: contain;
+    width: 100%;
+    opacity: 0.2;
+}
+
+/*rainbow bar*/
+.desktopTwo-container img:nth-child(3){
+    left: 0px;
+    bottom: 0px;
+    height: 5px;
+    width: 100%;
+    z-index: 999;
+}
+
+/*CD label*/
+.desktopTwo-container img:nth-child(4){
+    left: 10px;
+    top: 10px;
+}
+
+/*TV standby*/
+.desktopTwo-container img:nth-child(5){
+    right: 250px;
+    bottom: 110px;
+    height: 150px;
+    width: auto;
+    z-index: 2;
+}
+
+/*gundam transformer*/
+.desktopTwo-container img:nth-child(6){
+    right: 530px;
+    bottom: 20px;
+    height: 280px;
+    width: auto;
+    z-index: 2;
+}
+
+/*Storage Window styling*/
+/* Create two equal columns that floats next to each other */
+.first-column {
+    float: left;
+    width: 33.33%;
+    padding: 1px;
+    font-family: "Pixelated MS Sans Serif";
+  }
+  
+  /* Clear floats after the columns */
+  .first-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Create three equal columns that floats next to each other */
+.storage-column {
+    float: left;
+    width: 33.33%;
+    padding: 1px;
+    font-family: "Pixelated MS Sans Serif";
+  }
+  
+  /* Clear floats after the columns */
+  .storage-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/*PORTAL*/
+.portal-container{
+    position: relative; /*allows absolute positioning of images*/
+    width: 100%;
+    /*max-width: 600px; /*limit max-width of items*/
+    height: 450px; /*fixed height*/
+    overflow: hidden; /*hide any overflow*/
+    border: 2px solid #00000000; /*visibility*/
+    margin-bottom: 1px;
+    /*object-fit; contain; Maintain the aspect ratio without filling the container*/ 
+}
+
+.portal-container img{
+    max-width: 100%; /* Image will not exceed the width of the container */
+    max-height: 100%; /* Image will not exceed the height of the container */
+    position: absolute; /* Positioning the images inside the container */
+    /*object-fit: contain; /* Maintain the aspect ratio without filling the container */
+}
+
+/*positioning of .portal-container images*/
+/*portal image*/
+.portal-container img:nth-child(1){
+    top: 10px;
+    left: 150px;
+    height: 250px;
+    width: 150px; /* use 'auto' to maintain aspect ratio*/
+    object-fit: none;
+}
+
+/*door image*/
+.portal-container img:nth-child(2){
+    top: 10px;
+    left: 150px;
+    height: 250px;
+    width: 150px;
+}
+
+/*star cloud*/
+.portal-container img:nth-child(3){
+    top: 200px;
+    left: 110px;
+    height: 100px;
+    width: auto;
+}
+
+/*overthink*/
+.portal-container img:nth-child(4){
+    top: 80px;
+    left: 300px;
+    height: auto;
+    width: auto;
+}
+
+/*pink clouds (5,6,7)*/
+.portal-container img:nth-child(5){
+    position: absolute;
+    top: 170px;
+    height: 350px;
+    width: auto;
+    left: -100%; /* Start off-screen to the left */
+    /*transform: translateY(-50%); /* Adjust for image height */
+    animation: moveAcross 20s linear infinite; /* Animation properties */
+    animation-delay: 0s; /*animation starts immediately*/
+}
+
+.portal-container img:nth-child(6){
+    position: absolute;
+    top: 170px;
+    height: 350px;
+    width: auto;
+    left: -100%; /* Start off-screen to the left */
+    /*transform: translateY(-50%); /* Adjust for image height */
+    animation: moveAcross 20s linear infinite; /* Animation properties */
+    animation-delay: 6.66s;
+}
+
+.portal-container img:nth-child(7){
+    position: absolute;
+    top: 170px;
+    height: 350px;
+    width: auto;
+    left: -100%; /* Start off-screen to the left */
+    /*transform: translateY(-50%); /* Adjust for image height */
+    animation: moveAcross 20s linear infinite; /* Animation properties */
+    animation-delay: 13.32s;
+}
+
+/* Keyframes for the pink cloud animation */
+@keyframes moveAcross {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    100% {
+        left: 100%; /* End off-screen to the right */
+    }
+}
+
+/*void text*/
+.portal-container img:nth-child(8){
+    top: 100px;
+    right: 100px;
+    height: auto;
+    width: 400px;
+}
+
+/*enter*/
+.portal-container img:nth-child(9){
+    top: 40px;
+    left: 450px;
+    height: auto;
+    width: auto;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/*MOVING BANNER*/
+.moving-container{
+    position: relative; /*allows absolute positioning of images*/
+    width: 100%;
+    /*max-width: 600px; /*limit max-width of items*/
+    height: 300px; /*fixed height*/
+    overflow: hidden; /*hide any overflow*/
+    border: 2px solid #00000000; /*visibility*/
+    /*margin-bottom: 10px;*/
+    /*object-fit; contain; Maintain the aspect ratio without filling the container*/ 
+}
+
+.moving-container img{
+    max-width: 100%; /* Image will not exceed the width of the container */
+    max-height: 100%; /* Image will not exceed the height of the container */
+    position: absolute; /* Positioning the images inside the container */
+
+}
+
+/*positioning of .moving-container images*/
+/*moving images*/
+.moving-container img:nth-child(1){
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGY1Z3FveWk0ZjIxdmttY3l2ZG1seGg1MmI1ZHljMHAzYjM2NHY3MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/isqxY03RuhGxNbCPzY/giphy.webp);
+    background-size: contain;
+    width: 100%;
+}
+
+/*rainbow banner 2*/
+.moving-container img:nth-child(2){
+    left: 0px;
+    top: 0px;
+    height: 5px;
+    width: 100%;
+    z-index: 999;
+}
+
+/*hammer 1*/
+.moving-container img:nth-child(3){
+    left: 0px;
+    top: 0px;
+}
+
+/*hammer 2*/
+.moving-container img:nth-child(4){
+    left: 300px;
+    top: 0px;
+}
+
+/*hammer 3*/
+.moving-container img:nth-child(5){
+    left: 600px;
+    top: 0px;
+}
+
+/*hammer 4*/
+.moving-container img:nth-child(6){
+    left: 900px;
+    top: 0px;
+}
+
+/*hammer 4*/
+.moving-container img:nth-child(7){
+    left: 1200px;
+    top: 0px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/*JOURNAL*/
+.tree-view{
+    background-color: #00000000;
+}
+
+.journal-container{
+    position: relative; /*allows absolute positioning of images*/
+    width: 100%;
+    /*max-width: 600px; /*limit max-width of items*/
+    height: 800px; /*fixed height*/
+    overflow: hidden; /*hide any overflow*/
+    border: 2px solid #00000000; /*visibility*/
+    /*margin-bottom: 10px;*/
+    /*object-fit; contain; Maintain the aspect ratio without filling the container*/ 
+}
+
+.journal-container img{
+    max-width: 100%; /* Image will not exceed the width of the container */
+    max-height: 100%; /* Image will not exceed the height of the container */
+    position: absolute; /* Positioning the images inside the container */
+    /*object-fit: contain; /* Maintain the aspect ratio without filling the container */
+}
+
+.journal-container img:nth-child(1){
+    background-image: url(https://www.newegg.com/insider/wp-content/uploads/windows_xp_bliss-wide.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
+/*positioning of .journal-container images*/
+/*made with label*/
+.journal-container img:nth-child(2){
+    bottom: 0px;
+    right: 0px;
+}
+
+/*sticky note*/
+.journal-container img:nth-child(3){
+    top: 50px;
+    right: 70px;  
+}
+
+/*skeleton*/
+.journal-container img:nth-child(4){
+    top: 100px;
+    right: 400px;
+}
+
+/*skeleton sparkles 1*/
+.journal-container img:nth-child(5){
+    top: 100px;
+    right: 400px;
+}
+
+/*skeleton sparkles 2*/
+.journal-container img:nth-child(6){
+    top: 350px;
+    right: 500px;
+}
+
+/*skeleton sparkles 3*/
+.journal-container img:nth-child(7){
+    top: 465px;
+    right: 470px;
+}
+
+/*skeleton heart*/
+.journal-container img:nth-child(8){
+    top: 80px;
+    right: 560px;
+}
+
+/*heart border*/
+.journal-container img:nth-child(9){
+    left: 0px;
+    top: 0px;
+    height: 30px;
+    width: 100%;
+    z-index: 999;
+}
+
+/*journal gif*/
+.journal-container img:nth-child(10){
+    top: 250px;
+    left: 350px;
+    height: 150px;
+    width: auto;
+    
+}
+
+/*journal title*/
+.journal-container img:nth-child(11){
+    top: 100px;
+    left: 100px;
+}
+
+/*journal sparkle*/
+.journal-container img:nth-child(12){
+    top: 60px;
+    left: 390px;
+}
+
+/*grave*/
+.journal-container img:nth-child(13){
+    bottom: 0px;
+    right: 150px;
+    height: 150px;
+    width: auto;
+}
+
+/*love letter*/
+.journal-container img:nth-child(14){
+    top: 208px;
+    left: 60px;
+}
+
+/*frame*/
+.journal-container img:nth-child(15){
+    bottom: 30px;
+    left: 500px;
+    height: 300px;
+    width: auto;
+}
+
+/*dove left*/
+.journal-container img:nth-child(16){
+    bottom: 230px;
+    left: 430px;
+    height: 200px;
+    width: auto;
+}
+
+/*dove right*/
+.journal-container img:nth-child(17){
+    bottom: 230px;
+    left: 620px;
+    height: 200px;
+    width: auto;
+}
+
+/*sparkles*/
+.journal-container img:nth-child(18){
+    bottom: 80px;
+    left: 540px;
+    height: 210px;
+    width: 143px;
+}
+
+/*heart background*/
+.journal-container img:nth-child(){
+    background-image: url(https://web.archive.org/web/20091020104116if_/http://hk.geocities.com/ironterry_crystal/background/move_heart.gif); 
+    width: 100%;
+    background-size: contain;
+    
+}
+
+.journal-text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #7f005f;
+}
+
+.hope{
+    position: absolute;
+    top: 130px;
+    right: 130px;
+    font-size: 20px;
+}
+
+.hopeless{
+    position: absolute;
+    top: 280px;
+    right: 500px;
+}
+
+.love-life{
+    font-family: 'Butcherman';font-size: 22px;
+    color:#ad0000;
+    position: absolute;
+    bottom: 0px;
+    right: 320px;
+}
+
+/*-------------------------------------------*\
+    Tree View
+\*-------------------------------------------*/
+
+ul.tree-view {
+    position: absolute;
+    top: 200px;
+    left: 120px;
+    /*font-family: var(--sans-serif);*/
+    font-size: 15px;
+    color: #b8018a;
+    display: block;
+    border-color: rgba(0, 0, 0, 0);
+    background: var(--button-highlight);
+    padding: 6px;
+    margin: 0;
+    li {
+        list-style-type: none;
+        margin-top: 3px;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+        &:focus {
+            background-color: var(--dialog-blue);
+            color: var(--button-highlight);
+        }
+    }
+    ul {
+        margin-top: 3px;
+        margin-left: 16px;
+        padding-left: 16px;
+        border-left: 1px dotted #808080;
+        > li {
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: -16px;
+                top: 6px;
+                width: 12px;
+                border-bottom: 1px dotted #808080;
+            }
+            &:last-child {
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: -20px;
+                    top: 7px;
+                    bottom: 0px;
+                    width: 8px;
+                    background: var(--button-highlight);
+                }
+            }
+        }
+        details {
+            > summary {
+                &:before {
+                    margin-left: -22px;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    details {
+        margin-top: 0;
+        > summary {
+            &:before {
+                text-align: center;
+                display: block;
+                float: left;
+                content: "+";
+                border: 1px solid #808080;
+                width: 8px;
+                height: 9px;
+                line-height: 9px;
+                margin-right: 5px;
+                padding-left: 1px;
+                background-color: #fff;
+            }
+        }
+    }
+    details[open] {
+        summary {
+            margin-bottom: 0;
+        }
+        > summary {
+            &:before {
+                content: "-";
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/*MINI SPARKLES MEMORIAL*/
+.memorial-container{
+    position: relative; /*allows absolute positioning of images*/
+    width: 100%;
+    /*max-width: 600px; /*limit max-width of items*/
+    height: 300px; /*fixed height*/
+    overflow: hidden; /*hide any overflow*/
+    border: 2px solid #000; /*visibility*/
+    /*margin-bottom: 10px;*/
+    /*object-fit; contain; Maintain the aspect ratio without filling the container*/ 
+}
+
+.memorial-container img{
+    max-width: 100%; /* Image will not exceed the width of the container */
+    max-height: 100%; /* Image will not exceed the height of the container */
+    position: absolute; /* Positioning the images inside the container */
+    object-fit: contain; /* Maintain the aspect ratio without filling the container */
+}
+
+/*positioning of .memorial-container images*/
+/*memorial images*/
+.memorial-container img:nth-child(1){
+    top: 10px;
+    left: 50px;
+    height: 250px;
+    width: auto;
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+/*WOBBLE EFFECT*/
+
+.wobble-effect {
+    animation: wobble 1s infinite;
+}
+
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
