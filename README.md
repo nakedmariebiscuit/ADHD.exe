@@ -9,6 +9,7 @@ Dive into the <a href="https://nakedmariebiscuit.github.io/ADHD.exe/">Simulator!
 # Zoned Out
 “Huh? What? Ja, no of course I was listening”
 
+
 # Hyperfocus
 I have a report to finish for work but it is imperative that I learn what it takes to become a pet immigration specialist.
 <img width="1372" alt="adhd_projectcontent_4" src="https://github.com/user-attachments/assets/95f88cb2-6a81-4b71-b98c-ba02a5ce92b6">
@@ -20,6 +21,8 @@ I have a report to finish for work but it is imperative that I learn what it tak
 # Sensory Overload
 Everything is too loud and everything is too bright. The tag on my shirt makes me want to flip tables. MAKE IT STOP!
 P.S. Drag the Nervous System pop-up for a neat surprise that’s sure to distract you from navigating the rest of this browser.
+![sensory](https://github.com/user-attachments/assets/a5c54bb8-c004-481c-9e65-84f28a9b7850)
+
 
 # Daydreaming
 Get lost in a landscape of reveries and glitch fantasies. Who needs TV when you’ve got one in your noggin? 
