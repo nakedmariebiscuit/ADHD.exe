@@ -4,7 +4,7 @@ Inspired by glitch art and the early 2000s internet, “adhd.exe" is an interact
 
 Please note that not all people with ADHD (and neurodivergents by extension) experience the same symptoms in the same way. This simulator is my own artistic representation of my own experiences. However, I do hope that many of you can relate to aspects of it.
 
-Let's dive in!
+Dive into the <a href="https://nakedmariebiscuit.github.io/ADHD.exe/">Simulator!</a>
 
 # Zoned Out
 “Huh? What? Ja, no of course I was listening”
