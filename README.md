@@ -9,6 +9,7 @@ Dive into the <a href="https://nakedmariebiscuit.github.io/ADHD.exe/">Simulator!
 # Zoned Out
 “Huh? What? Ja, no of course I was listening”
 ![zoned (1)](https://github.com/user-attachments/assets/eccff009-d1ff-44bb-a907-f6baea758659)
+<img width="1038" alt="Screenshot 2024-08-19 at 19 50 27" src="https://github.com/user-attachments/assets/3197b6f8-b113-46d7-87b4-18c8ebb4e003">
 
 
 # Hyperfocus
